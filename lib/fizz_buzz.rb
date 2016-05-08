@@ -8,6 +8,39 @@ def fizz_buzz(number)
 end
 
 def divisible_by_three?(number)
+  has_zero_remainder(number, 3)
+end
+
+def divisible_by_five?(number)
+  has_zero_remainder(number, 5)
+end
+
+def divisible_by_fifteen?(number)
+  has_zero_remainder(number, 15)
+end
+
+def has_zero_remainder(number, divider)
+  number % divider == 0
+end
+
+
+
+
+
+
+=begin
+# Original code before the refactoring.
+
+def fizz_buzz(number)
+  case
+    when divisible_by_fifteen?(number) then 'fizz buzz'
+    when divisible_by_three?(number) then 'fizz'
+    when divisible_by_five?(number) then 'buzz'
+    else number
+  end
+end
+
+def divisible_by_three?(number)
   number % 3 == 0
 end
 
@@ -18,3 +51,4 @@ end
 def divisible_by_fifteen?(number)
   number % 15 == 0
 end
+=end

@@ -16,5 +16,10 @@ describe 'fizz_buzz' do
   it "returns 'Oops, the number must be greater than 0'" do
      expect {raise ArgumentError}
   end
+end
 
+describe '.has_zero_remainder' do
+  it "method for calulation of the remainder" do
+    expect(has_zero_remainder(5, 5)).to eq true
+  end
 end

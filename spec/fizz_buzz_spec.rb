@@ -13,5 +13,8 @@ describe 'fizz_buzz' do
   it "returns 'fizzbuzz' if number is divisible by 15" do
     expect(fizz_buzz(15)).to eq 'fizz buzz'
   end
-  
+  it "returns 'Oops, the number must be greater than 0'" do
+     expect {raise ArgumentError}
+  end
+
 end
